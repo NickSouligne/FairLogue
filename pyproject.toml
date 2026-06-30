@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fairlogue"
+version = "0.1.0"
+description = "Intersectional fairness evaluation tools for clinical machine learning."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Your Name" }
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+lgbm = ["lightgbm"]
+
+[tool.setuptools.packages.find]
+include = ["FairLogue*"]
